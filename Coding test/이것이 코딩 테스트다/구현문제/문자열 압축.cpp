@@ -8,7 +8,7 @@ int solution(string s){
     int answer = s.size();
     for(int i=1; i<=s.size()/2; i++){
         int cnt =1;
-        string temp = "", a="";
+        string temp = "", a= "";
         a = s.substr(0,i);
         // basic_string substr(size_type pos = 0, size_type count = npos) const;
         // 문자열의 일부를 리턴한다.
@@ -20,7 +20,7 @@ int solution(string s){
             else{
                 if(cnt>1) temp+= to_string(cnt);
                 temp += a;
-                a =s.substr(j,i);
+                a = s.substr(j,i);
                 cnt = 1;
             }
         }
