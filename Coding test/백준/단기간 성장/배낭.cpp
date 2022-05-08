@@ -1,4 +1,6 @@
+
 """
+
 평범한 배낭
 시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
 2 초	512 MB	57308	21103	13716	35.368%
@@ -27,7 +29,6 @@
 
 예제 출력 1 
 14
-
 """
 
 using namespace std; // std::cout 이거를 cout만 써도 되게 한다.
@@ -39,14 +40,14 @@ int V[101];
 
 int main()
 {
-    cin >> N >> K;
+    cin >> N >> K; // N K 를 입력
 
-    for (int i = 1; i <= N; i++)
-    cin >>W[i]>>V[i];
+    for (int i = 1; i <= N; i++) // i는 1부터 N까지 계속 1씩 더함
+    cin >>W[i]>>V[i]; // weight랑 value에 계속 순서대로 값을 넣는다.
 
-    for (int i =1; i <= N; i++)
+    for (int i=1; i <= N; i++) // i를 물품의 수 까지 계속 1씩 키워간다.
     {
-        for (int j = 1; j <=K; j++)
+        for (int j = 1; j <=K; j++) // j를 최대값 k(가치합의 최대값) 까지 계속 키워간다.
         {
             if (j - W[i] >= 0) DP[i][j] = max(DP[i-1][j], DP[i-1][j-W[i]] + V[i]]);
             else DP[i][j] = DP[i-1][j];
@@ -54,6 +55,8 @@ int main()
     }
     cout <<DP[N][K];
 }
+
+
 
 using namespace std;
 int N, K;
