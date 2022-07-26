@@ -6,7 +6,7 @@ using namespace std;
 int M, N, Point;
 int Size = N + 2*(M -1);
 
-vector<vector<int>> MAP(Size, vector<int>(Size, 2));
+vector<vector<int > > MAP(Size, vector<int>(Size, 2));
 
 void Make_MAP(vector<vector<int> > lock)
 {
