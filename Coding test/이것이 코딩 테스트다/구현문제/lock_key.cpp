@@ -73,28 +73,37 @@
 //     return 0;
 // }
 // resizing vector
-#include <iostream>
-#include <vector>
 
-int main ()
-{
-  std::vector<int> myvector;
+// #include <iostream>
+// #include <vector>
 
-  // set some initial content:
-  for (int i=1;i<10;i++) myvector.push_back(i);
+// int main ()
+// {
+//   std::vector<int> myvector;
 
-  myvector.resize(5);
-  myvector.resize(8,100);
-  myvector.resize(12);
+//   // set some initial content:
+//   for (int i=1;i<10;i++) myvector.push_back(i);
 
-  std::cout << "myvector contains:";
-  for (int i=0;i<myvector.size();i++)
-    std::cout << ' ' << myvector[i];
-  std::cout << '\n';
+//   myvector.resize(5);
+//   myvector.resize(8,100);
+//   myvector.resize(12);
 
-  return 0;
+//   std::cout << "myvector contains:";
+//   for (int i=0;i<myvector.size();i++)
+//     std::cout << ' ' << myvector[i];
+//   std::cout << '\n';
+
+//   return 0;
+// }
+
+#include<vector>
+vector<vector<int>> arr;
+for(int i=0; i<n; i++){
+  vector<int>element(n);
+  arr.push_back(element);
 }
 
+출처: https://flower0.tistory.com/42 [개발자 라면:티스토리]
 // vector <vector<int> > rotateKey(vector<vector<int> > key){
 //     vector <vector<int> > rotatedKey(m, vector<int>(m));
     
