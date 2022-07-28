@@ -25,11 +25,11 @@
 // }
 
 
-#include <string>
-#include <vector>
+// #include <iostream>
+// #include <vector>
 
-using namespace std;
-int n, m;
+// using namespace std;
+// int n, m;
 
 // vector<vector<int>> expandLock(vector<vector<int>> lock){
 //     vector<vector<int>> newLock(n*3, vector<int>(n*3));
@@ -53,18 +53,59 @@ int n, m;
 //     return newLock;
 // }
 
+// #include <iostream>
+// #include <vector>
+ 
+// #define M 3
+// #define N 4
+ 
+// int main()
+// {
+//     // Vector 요소를 채울 기본값을 지정합니다.
+//     int default_value = 1;
+ 
+//     // 채우기 생성자를 사용하여 2차원 Vector 초기화
+//     // 주어진 기본값으로
+//     std::vector<std::vector<int>> matrix(M, std::vector<int>(N, default_value));
+ 
+//     // 2차원 Vector를 출력
+ 
+//     return 0;
+// }
+// resizing vector
+#include <iostream>
+#include <vector>
 
-vector <vector<int> > rotateKey(vector<vector<int> > key){
-    vector <vector<int> > rotatedKey(m, vector<int>(m));
-    
-    for(int i=0; i<m; i++){
-        for(int j =0; j<m; j++){
-            rotatedKey[i][j] = key[m-j-1][i];
-        }
-    }
-    
-    return rotatedKey;
+int main ()
+{
+  std::vector<int> myvector;
+
+  // set some initial content:
+  for (int i=1;i<10;i++) myvector.push_back(i);
+
+  myvector.resize(5);
+  myvector.resize(8,100);
+  myvector.resize(12);
+
+  std::cout << "myvector contains:";
+  for (int i=0;i<myvector.size();i++)
+    std::cout << ' ' << myvector[i];
+  std::cout << '\n';
+
+  return 0;
 }
+
+// vector <vector<int> > rotateKey(vector<vector<int> > key){
+//     vector <vector<int> > rotatedKey(m, vector<int>(m));
+    
+//     for(int i=0; i<m; i++){
+//         for(int j =0; j<m; j++){
+//             rotatedKey[i][j] = key[m-j-1][i];
+//         }
+//     }
+    
+//     return rotatedKey;
+// }
 
 
 // #include <iostream>
@@ -90,4 +131,46 @@ vector <vector<int> > rotateKey(vector<vector<int> > key){
 //         y_Idx = 0;
 //     }
 //     return Check;
+// }
+
+// #include <iostream>
+// using std::cout; // cout으로 범위를 좁혀 네임스페이스 지정
+ 
+// int main()
+// {
+//     int i = 0;
+//     cin >> i; // 컴파일 오류 발생
+//     cout << i; 
+// }
+
+// class vector<bool>::reference {
+//   friend class vector;
+//   reference();  // public 생성자가 아니다
+//  public:
+//   ~reference();
+//   operator bool() const;                     // bool 로 캐스팅 한다.
+//   reference& operator=(const bool x);        // bool 을 대입
+//   reference& operator=(const reference& x);  // 비트로 대입
+//   void flip();  // 비트값 반전 (0 -> 1, 1 -> 0)
+// // }
+
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main() {
+//   unsigned int i;  // 위에서 설명한 생성자들을 차례대로 오버로딩함 vector<int>
+//                    // first;                                // int 를 보관할 빈
+//                    // 벡터 생성    vector<int> second (4,100); // 값이 100 인
+//                    // int 원소 4 개 보관    vector<int> third
+//                    // (second.begin(),second.end());  // second 의 처음 ~ 끝으로
+//                    // 생성    vector<int> fourth (third); // 세 번째 벡터 복사본
+//   // 배열을 통해서도 생성 가능하다.
+
+//   int myints[] = {16, 2, 77, 29};
+//   vector<int> fifth(myints, myints + sizeof(myints) / sizeof(int));
+//   cout << "The contents of fifth are:";
+//   for (i = 0; i < fifth.size(); i++) cout << " " << fifth[i];
+//   cout << endl;
+//   return 0;
 // }
