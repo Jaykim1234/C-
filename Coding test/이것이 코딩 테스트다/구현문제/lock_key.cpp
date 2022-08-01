@@ -96,14 +96,7 @@
 //   return 0;
 // }
 
-#include<vector>
-vector<vector<int>> arr;
-for(int i=0; i<n; i++){
-  vector<int>element(n);
-  arr.push_back(element);
-}
 
-출처: https://flower0.tistory.com/42 [개발자 라면:티스토리]
 // vector <vector<int> > rotateKey(vector<vector<int> > key){
 //     vector <vector<int> > rotatedKey(m, vector<int>(m));
     
@@ -183,3 +176,17 @@ for(int i=0; i<n; i++){
 //   cout << endl;
 //   return 0;
 // }
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+	vector<int> v(6);
+	for (int i = 0; i < v.size()-2; i++)
+		cout << v[i] << '/';
+		
+	return 1;
+}
