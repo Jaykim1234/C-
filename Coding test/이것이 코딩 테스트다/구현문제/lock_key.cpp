@@ -184,9 +184,9 @@ using namespace std;
 
 int main()
 {
-	vector<int> v(6);
+	vector<vector<int>> v(6, vector<int>);
 	for (int i = 0; i < v.size()-2; i++)
-		cout << v[i] << '/';
+		cout << v[0][i] << '/';
 		
 	return 1;
 }
