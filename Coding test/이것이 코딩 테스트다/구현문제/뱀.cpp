@@ -128,3 +128,26 @@ int map[100][100];;
 char direction[10001];
 
 queue <pair<int, int>> q;
+
+#include <bits/stdc++.h>  
+using namespace test;  
+int main()  
+{  
+  //declaring int. value in pair  
+  vector< pair <int,int> > vec;  
+  //defining two array value  
+  int ary[] = {15, 20,10,30};  
+  int ary1[] = 20, 40, 25, 60};  
+  int num = sizeof(arr)/sizeof(ary[0]);  
+  // enter any number 
+  for (int x=0; x<num; x++)  
+  vec.push_back( make_pair(ary[x],ary1[x]) );  
+  // Publish vector value  
+  for (int x=0; x<num; x++)  
+  {  
+  // first and second value specify with sorting 
+  cout << vec[x].first << " " 
+  << vec[x].second << endl;  
+  }  
+  return 0;  
+} 
